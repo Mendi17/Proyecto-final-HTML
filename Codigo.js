@@ -51,10 +51,7 @@ function calcularPedido() {
 
     document.getElementById("resultado_pedido").textContent = "El total de tu combo es: $" + total;
 
-    // Guardamos el precio total
     localStorage.setItem("precioGuardado", total);
-    
-    // Agregamos esto para guardar qué pidió la persona
     localStorage.setItem("hamburguesaGuardada", hamburguesa);
     localStorage.setItem("bebidaGuardada", bebida);
     localStorage.setItem("postreGuardado", postre);
@@ -83,7 +80,6 @@ function mostrarComprobante() {
     let precio = localStorage.getItem("precioGuardado");
     let pago = localStorage.getItem("metodoPago");
     
-
     let hamburguesa = localStorage.getItem("hamburguesaGuardada");
     let bebida = localStorage.getItem("bebidaGuardada");
     let postre = localStorage.getItem("postreGuardado");
@@ -91,7 +87,6 @@ function mostrarComprobante() {
     document.getElementById("ticket-nombre").textContent = nombre;
     document.getElementById("ticket-precio").textContent = precio;
     document.getElementById("ticket-pagado").textContent = "Pagado con " + pago;
-    
     
     document.getElementById("ticket-hamburguesa").textContent = hamburguesa;
     document.getElementById("ticket-bebida").textContent = bebida;
