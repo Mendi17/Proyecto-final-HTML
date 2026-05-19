@@ -92,3 +92,4 @@ function mostrarComprobante() {
     document.getElementById("ticket-bebida").textContent = bebida;
     document.getElementById("ticket-postre").textContent = postre;
 }
+}
