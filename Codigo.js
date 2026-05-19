@@ -3,7 +3,7 @@ function validar() {
     let contraseña = document.getElementById("contraseña").value;
 
     if (usuario === "admin" && contraseña === "1234") {
-        window.location.href = "index.html";
+        window.location.href = "menu.html";
     } else {
         alert("Usuario o contraseña incorrectos");
         document.getElementById("usuario").value = "";
