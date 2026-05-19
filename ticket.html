@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Finalizar Pedido</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="codigo.js"></script>
+</head>
+<body>
+
+   
+    <div class="contenedor" style="color: white;">
+        <h2>Finalizar Pedido</h2>
+
+        <label for="cliente">Nombre:</label>
+        <br>
+        <input type="text" id="cliente">
+        <br><br>
+
+        <label for="pago">Método de Pago:</label>
+        <br>
+        <select id="pago">
+            <option value="Efectivo" style="color: black;">Efectivo</option>
+            <option value="Tarjeta" style="color: black;">Débito/Crédito</option>
+            <option value="MercadoPago" style="color: black;">Mercado Pago</option>
+        </select>
+        <br><br>
+
+        <button onclick="generarTicket()">Finalizar Compra</button>
+        <button onclick="limpiarTicket()">Borrar datos</button>
+
+        <!-- Le puse el color neón al mensaje final para que resalte más -->
+        <p id="mensaje_ticket" style="color: #00e5ff; font-family: Arial; font-size: 1.2rem; font-weight: bold;"></p>
+        
+        <br>
+        <button onclick="window.location.href='index.html'">Volver al menú</button>
+    </div>
+
+</body>
+</html>
