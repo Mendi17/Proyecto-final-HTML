@@ -6,12 +6,15 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+
     <div class="contenedor" style="color: white;">
         <h2>Finalizar Pedido</h2>
+
         <label for="cliente">Nombre:</label>
         <br>
         <input type="text" id="cliente">
         <br><br>
+
         <label for="pago">Método de Pago:</label>
         <br>
         <select id="pago">
@@ -20,9 +23,12 @@
             <option value="MercadoPago" style="color: black;">Mercado Pago</option>
         </select>
         <br><br>
+
         <button onclick="generarTicket()">Finalizar Compra</button>
         <button onclick="limpiarTicket()">Borrar datos</button>
+
         <p id="mensaje_ticket" style="color: #00e5ff; font-family: Arial; font-size: 1.2rem; font-weight: bold;"></p>
+        
         <br>
         <a href="menu.html" class="btn-link">Volver al Menú</a>
     </div>
