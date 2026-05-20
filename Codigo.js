@@ -1,19 +1,19 @@
 function validar() {
     let usuario = document.getElementById("usuario").value;
-    let contraseña = document.getElementById("contraseña").value;
+    let contrasena = document.getElementById("contrasena").value;
 
-    if (usuario === "admin" && contraseña === "1234") {
+    if (usuario === "admin" && contrasena === "1234") {
         window.location.href = "menu.html";
     } else {
         alert("Usuario o contraseña incorrectos");
         document.getElementById("usuario").value = "";
-        document.getElementById("contraseña").value = "";
+        document.getElementById("contrasena").value = "";
     }
 }
 
 function limpiar() {
     document.getElementById("usuario").value = "";
-    document.getElementById("contraseña").value = "";
+    document.getElementById("contrasena").value = "";
 }
 
 function calcularPedido() {
