@@ -60,18 +60,21 @@ function calcularPedido() {
 function generarTicket() {
     let cliente = document.getElementById("cliente").value;
     let pago = document.getElementById("pago").value;
+    let fecha = document.getElementById("fechaNacimiento").value; 
 
-    if (cliente === "") {
-        alert("ingrese un nombre");
+    if (cliente === "" || fecha === "") {
+        alert("Por favor, ingrese un nombre y su fecha de nacimiento");
     } else {
         localStorage.setItem("nombreCliente", cliente);
         localStorage.setItem("metodoPago", pago);
+        localStorage.setItem("fechaGuardada", fecha); 
         window.location.href = "comprobante.html";
     }
 }
 
 function limpiarTicket() {
     document.getElementById("cliente").value = "";
+    document.getElementById("fechaNacimiento").value = "";
     document.getElementById("mensaje_ticket").textContent = "";
 }
 
@@ -79,12 +82,14 @@ function mostrarComprobante() {
     let nombre = localStorage.getItem("nombreCliente");
     let precio = localStorage.getItem("precioGuardado");
     let pago = localStorage.getItem("metodoPago");
+    let fecha = localStorage.getItem("fechaGuardada"); 
     
     let hamburguesa = localStorage.getItem("hamburguesaGuardada");
     let bebida = localStorage.getItem("bebidaGuardada");
     let postre = localStorage.getItem("postreGuardado");
 
     document.getElementById("ticket-nombre").textContent = nombre;
+    document.getElementById("ticket-fecha").textContent = fecha; 
     document.getElementById("ticket-precio").textContent = precio;
     document.getElementById("ticket-pagado").textContent = "Pagado con " + pago;
     
